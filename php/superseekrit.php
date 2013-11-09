@@ -2,6 +2,8 @@
 	<body>
 		<?php
 			
+			ini_set('display_errors', 'On');
+
 			$dbloc = getenv("OPENSHIFT_MYSQL_DB_HOST");
 			$dbusr = getenv("OPENSHIFT_MYSQL_DB_USERNAME");
 			$dbpass = getenv("OPENSHIFT_MYSQL_DB_PASSWORD");

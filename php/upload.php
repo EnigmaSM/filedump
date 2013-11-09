@@ -9,6 +9,7 @@
 		<div id="intro">
 			<h1>Upload You File<span>(pls)</span></h1>
 		<?php
+			ini_set('display_errors', 'On');
 			if(isset($_FILES['upfile'])){
 				$file = $_FILES['upfile'];
 				$dbpass = getenv("OPENSHIFT_DATA_DIR");
