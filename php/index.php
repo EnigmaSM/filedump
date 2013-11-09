@@ -87,7 +87,6 @@ header("Pragma: no-cache");
 		$dbloc = getenv("OPENSHIFT_MYSQL_DB_HOST");
 		$dbusr = getenv("OPENSHIFT_MYSQL_DB_USERNAME");
 		$dbpass = getenv("OPENSHIFT_MYSQL_DB_PASSWORD");
-		$dbport = getenv("OPENSHIFT_MYSQL_DB_PORT");
 		/*
 		$dbloc = "localhost";
 		$dbusr = "root";
@@ -114,9 +113,9 @@ header("Pragma: no-cache");
 	</head>
 	<body>
 		<div id="intro">
-			<h1>Welcome To File Dump</h1>
+			<h1>Welcome To<br>File Dump</h1>
 			<p>The simple file sharing service.</p>
-			<p> It's so simple that we've removed the difficult task of deciding what files you want to share.</p>
+			<p> It's so simple that we've removed the chore of controlling what file you want to download.</p>
 		</div>
 		
 		<div id="downloads">
@@ -156,8 +155,11 @@ header("Pragma: no-cache");
 			  
 			  <p>Trustworthyness: questionable</p>
 		  </a>
-		  <a id="uploadButton" style="height:0px; opacity:0; display:none;" href="./">
+		  <a class="uploadButton" style="height:0px; opacity:0; display:none;" href="./">
 		  	Give Me Another Pair
+		  </a>
+		  <a class="uploadButton" style="height:0px; opacity:0; display:none;" href="./leaderboard.php">
+		  	Leaderboard
 		  </a>
 		</div>
 		
@@ -185,7 +187,7 @@ header("Pragma: no-cache");
 										s=$(s.parent());
 									}
 
-									$('#uploadButton').show().animate(
+									$('.uploadButton').show().animate(
 									{
 										height: "40px",
 										opacity: '1'
