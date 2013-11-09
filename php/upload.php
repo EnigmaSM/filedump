@@ -29,9 +29,8 @@
 				$link = mysql_connect($dbloc, $dbusr, $dbpass);
 				mysql_select_db("filedump");
 
-				$numfiles = mysql_fetch_assoc(mysql_query(
-					"SELECT MAX(id) FROM files"
-					))["MAX(id)"];
+				$numfiles = mysql_fetch_assoc(mysql_query("SELECT MAX(id) FROM files"));
+				$numfiles = $numfiles["MAX(id)"];
 
 				if(!mysql_query(
 					"INSERT INTO files (id, filepath, elo) VALUES (". ($numfiles+1) .", '". $newloc ."', 1400)"
