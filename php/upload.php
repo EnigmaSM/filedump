@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		  <meta charset="utf-8">
+		<meta charset="utf-8">
 		<title> File Dump </title>
 		<link rel="stylesheet", href="mainstyle.css" />
 	</head>
@@ -12,8 +12,7 @@
 			ini_set('display_errors', 'On');
 			if(isset($_FILES['upfile'])){
 				$file = $_FILES['upfile'];
-				$dbpass = getenv("OPENSHIFT_DATA_DIR");
-				$filedir = "./files/";
+				$filedir = getenv("OPENSHIFT_DATA_DIR");
 				$newloc = $filedir . $file['name'];
 				move_uploaded_file($file['tmp_name'], $newloc);
 
