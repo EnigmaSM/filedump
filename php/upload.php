@@ -20,6 +20,7 @@
 				$dbloc = getenv("OPENSHIFT_MYSQL_DB_HOST");
 				$dbusr = getenv("OPENSHIFT_MYSQL_DB_USERNAME");
 				$dbpass = getenv("OPENSHIFT_MYSQL_DB_PASSWORD");
+				$dbport = getenv("OPENSHIFT_MYSQL_DB_PORT");
 				/*
 				$dbloc = "localhost";
 				$dbusr = "root";

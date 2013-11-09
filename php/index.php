@@ -83,15 +83,16 @@ header("Pragma: no-cache");
 		ini_set('display_errors', 'On');
 		
 
-		/*
+		
 		$dbloc = getenv("OPENSHIFT_MYSQL_DB_HOST");
 		$dbusr = getenv("OPENSHIFT_MYSQL_DB_USERNAME");
 		$dbpass = getenv("OPENSHIFT_MYSQL_DB_PASSWORD");
-		*/
+		$dbport = getenv("OPENSHIFT_MYSQL_DB_PORT");
+		/*
 		$dbloc = "localhost";
 		$dbusr = "root";
 		$dbpass = "root";
-
+		*/
 		$link = mysql_connect($dbloc, $dbusr, $dbpass);
 		mysql_select_db("filedump");
 
