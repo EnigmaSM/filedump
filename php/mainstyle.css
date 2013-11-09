@@ -186,6 +186,10 @@
 		    	box-shadow: 0 0 5px #ED5413;
 			 }
 
+			 #downloads .uploadButton.greyed:hover{
+			 	cursor: default;
+			 }
+
 			 #downloads .uploadButton + .uploadButton{
 			 	margin-top:20px;
 			 }
