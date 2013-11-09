@@ -1,0 +1,180 @@
+@font-face {
+			  font-family: 'Quicksand';
+			  font-style: normal;
+			  font-weight: 300;
+			  src: local('Quicksand Light'), local('Quicksand-Light'), url(http://themes.googleusercontent.com/static/fonts/quicksand/v2/qhfoJiLu10kFjChCCTvGlKRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
+			}
+
+			@font-face {
+			  font-family: 'Quicksand';
+			  font-style: normal;
+			  font-weight: 400;
+			  src: local('Quicksand Regular'), local('Quicksand-Regular'), url(http://themes.googleusercontent.com/static/fonts/quicksand/v2/sKd0EMYPAh5PYCRKSryvW7O3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+			}
+
+			*{
+				border:0px;
+				margin:0px;
+			}
+			
+			body{
+			  background-color: #111111;
+			  padding:40px;
+			}
+			
+			#intro, #outro{
+			  width:400px;
+			  margin-left:auto;
+			  margin-right:auto;
+			  
+			  text-align:center;
+			  font-family:'Quicksand',sans-serif;
+			  color:#eeeeee;
+			}
+			
+			#intro h1{
+			  font-size:40px;
+			  margin:20px;
+			}
+
+			#intro h1 span{
+				font-weight:normal;
+				font-size:8px;
+			}
+			
+			#intro p{
+			  margin:10px;	
+			}
+			
+			#outro a{
+			  text-decoration:none;
+			  color:#eeeeee;
+			}
+			
+			#outro a:hover{
+			  color:#ED5413
+			 }
+			 
+			 #downloads{
+			  width:405px;
+			  margin-left:auto;
+			  margin-right:auto;
+			  margin-top:30px;
+			  margin-bottom:30px;
+			 }
+			 
+			 #downloads a{
+			  text-decoration:none;
+			 }
+			 
+			 #downloads .bigtile:first-child{
+			  margin-right:5px;
+			 }
+			 
+			 #downloads .bigtile:last-child{
+			  margin-left:5px;
+			 }
+			 
+			 form{
+			 	width:100%;
+			 }
+
+			 #downloads form #filebutton{
+			 	display:block;
+			  	background-color:#eeeeee;
+			  	color:#111111;
+			  	border:0px;
+			  	margin:20px;
+			 	margin-bottom:20px;
+			  	margin-left:auto;
+			  	margin-right:auto;
+
+			  	font-family:'Quicksand',sans-serif;
+
+			 	padding:12px;
+				border-radius:5px;
+			 	-moz-box-sizing: border-box;
+			  	-webkit-box-sizing: border-box;
+			  	box-sizing: border-box;
+			 }
+
+			 #downloads form #filebutton input[type='button']{
+			 	display:inline-block;
+			 	border:1px solid #111111;
+			 	background-color:red;
+				border-radius:5px;
+			 }
+
+			 #downloads #uploadButton{
+			 	display:block;
+			  	font-family:'Quicksand',sans-serif;
+/* 			  	font-size:14px; */
+			  
+			  	background-color:#eeeeee;
+			  	color:#111111;
+			 
+			  	margin-left:auto;
+			  	margin-right:auto;
+
+			  	text-align:center;
+
+			  	width:195px;
+			 	height:40px;
+			  
+			 	padding:12px;
+				border-radius:5px;
+			 	-moz-box-sizing: border-box;
+			  	-webkit-box-sizing: border-box;
+			  	box-sizing: border-box;
+			 }
+
+			 #downloads #uploadButton:hover{
+			  background-color:#ffffff;
+			 }
+
+			 .bigtile{
+
+			 vertical-align: top;
+
+			  display:inline-block;
+			  font-family:'Quicksand',sans-serif;
+/* 			  font-size:14px; */
+			  
+			  background-color:#eeeeee;
+			  color:#111111;
+			 
+			  position:relative;
+			  width:195px;
+			  height:316px;
+			  
+			  padding:12px;
+			  border-radius:5px;
+			  -moz-box-sizing: border-box;
+			  -webkit-box-sizing: border-box;
+			  box-sizing: border-box;
+			 }
+
+			 .color1{
+			  	background-color:#ffffff
+			 }
+
+
+			 .dl{
+			  color:#111111;
+=			 }
+			 
+			 .dl:hover{
+			  background-color:#ffffff
+			 }
+			 
+			 .bigtile h1{
+			  margin-bottom:5px;
+			 }
+			 
+			 .dl p:last-child{
+			  position:absolute;
+			  bottom:12px;
+			  right:12px;
+			  left:12px;
+			  font-size:0.65em;
+			 }
