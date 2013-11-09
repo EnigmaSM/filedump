@@ -16,9 +16,10 @@
 				border:0px;
 				margin:0px;
 			}
-			
+
 			body{
-			  background-color: #111111;
+				background-image:url('blackorchid.png');
+			  background-color: #141414;
 			  padding:40px;
 			}
 			
@@ -49,10 +50,20 @@
 			#outro a{
 			  text-decoration:none;
 			  color:#eeeeee;
+			  -webkit-transition: color 75ms ease-out;
+			  -moz-transition: color 75ms ease-out;
+			  -o-transition: color 75ms ease-out;
+			  transition: color 75ms ease-out;
 			}
 			
 			#outro a:hover{
-			  color:#ED5413
+			  color:#ED5413;
+			 }
+
+
+			 ::-moz-selection{
+			  color:#E86B35;
+			  background-color:rgba(100,100,100,0.2);
 			 }
 			 
 			 #downloads{
@@ -80,6 +91,8 @@
 			 }
 
 			 #downloads form #filebutton{
+			 	vertical-align: top;
+
 			 	display:block;
 			  	background-color:#eeeeee;
 			  	color:#111111;
@@ -96,6 +109,20 @@
 			 	-moz-box-sizing: border-box;
 			  	-webkit-box-sizing: border-box;
 			  	box-sizing: border-box;
+
+
+			  	-webkit-transition: all 75ms ease-out;
+			    -moz-transition: all 75ms ease-out;
+			    -o-transition: all 75ms ease-out;
+			    transition: all 75ms ease-out;
+
+			 }
+
+			 #downloads form #filebutton:hover{
+			  	background-color:#ffffff;
+				border-color: #ED5413;
+		    	box-shadow: 0 0 5px #ED5413;
+
 			 }
 
 			 #downloads form #filebutton input[type='button']{
@@ -105,7 +132,7 @@
 				border-radius:5px;
 			 }
 
-			 #downloads #uploadButton{
+			 #downloads .uploadButton{
 			 	display:block;
 			  	font-family:'Quicksand',sans-serif;
 /* 			  	font-size:14px; */
@@ -126,15 +153,45 @@
 			 	-moz-box-sizing: border-box;
 			  	-webkit-box-sizing: border-box;
 			  	box-sizing: border-box;
+
+			  	-webkit-transition: all 75ms ease-out;
+			    -moz-transition: all 75ms ease-out;
+			    -o-transition: all 75ms ease-out;
+			    transition: all 75ms ease-out;
+
+			 }
+			
+			#downloads .uploadButton.greyed{
+				background-color:#cdcdcd;
+			}
+
+			 #downloads .uploadButton.gridded{
+			  	width:195px;
+			 	display:inline-block;
 			 }
 
-			 #downloads #uploadButton:hover{
+			 #downloads .uploadButton.gridded:nth-child(2n+1){
+			 	display:inline-block;
+			 	margin-right:7px;
+			 }
+
+			 #downloads .uploadButton.gridded:nth-child(2n){
+			 	display:inline-block;
+			 	margin-left:7px;
+			 }
+
+			 #downloads .uploadButton:not(.greyed):hover{
 			  background-color:#ffffff;
+				border-color: #ED5413;
+		    	box-shadow: 0 0 5px #ED5413;
+			 }
+
+			 #downloads .uploadButton + .uploadButton{
+			 	margin-top:20px;
 			 }
 
 			 .bigtile{
-
-			 vertical-align: top;
+			  vertical-align: top;
 
 			  display:inline-block;
 			  font-family:'Quicksand',sans-serif;
@@ -161,6 +218,10 @@
 
 			 .dl{
 			  color:#111111;
+			  -webkit-transition: background-color 75ms ease-out;
+			  -moz-transition: background-color 75ms ease-out;
+			  -o-transition: background-color 75ms ease-out;
+			  transition: background-color 75ms ease-out;
 =			 }
 			 
 			 .dl:hover{
