@@ -225,7 +225,7 @@ header("Pragma: no-cache");
 					$(line).css( 'font-size', n+"px" );
 					console.log($(line).width());
 					if(n<12){
-						$(line).css( 'font-size', s+"px" );
+						$(line).css( 'font-size', 12+"px" );
 						$(this).css("word-wrap","break-word");
 						$(this).css("overflow-wrap","break-word");
 						break;
