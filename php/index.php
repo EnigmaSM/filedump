@@ -205,20 +205,34 @@ header("Pragma: no-cache");
 				});
 			});
 
+			j = function(s){
+				console.log(s);
+				return parseInt(s.replace('p','').replace('x',''));
+			}
+
 			$( '.dl' ).each(function () {
 
 				console.log(this);
 
-				var width = $( this ).innerWidth();
-				var line = $($( this ).children()[ 0 ]).chidren()[0];
-				n = $(line).css('font-size');
+				var width = $( this ).width() - 2*j($(this).css('padding'));
+				var line = $( this ).children()[ 0 ];
 
-				console.log(width);
-				console.log(line.offsetWidth);
+				var s = j($(line).css('font-size'));
+				var n = s;
 
-				while ( line.offsetWidth() > width ) {
+				while ( $(line).width() > width ) {
 					n = n-1;
-					$(line).css( 'font-size', n );
+					$(line).css( 'font-size', n+"px" );
+					console.log($(line).width());
+					if(n<12){
+						$(line).css( 'font-size', s+"px" );
+						$(this).css("word-wrap","break-word");
+						$(this).css("overflow-wrap","break-word");
+
+						$($(this).children()[0]).css("float","none");
+
+						break;
+					}
 				}
 
 			});
