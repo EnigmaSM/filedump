@@ -15,15 +15,14 @@
 				} else{
 					$file = $_FILES['upfile'];
 					$filedir = getenv("OPENSHIFT_DATA_DIR");
-					$newloc = $filedir . $file['name'];
-					$n = $newloc;
+					$n = $filedir . $file['name'];
 					$counter = 0;
 					while(file_exists($n)) {
 						$p = pathinfo($newloc);
 						$n = $p["dirname"] ."/". $p["filename"] . "_". strval($counter).".". $p["extension"];
 						$counter++;
 					}
-					echo($n);
+					echo($file['name']);
 					move_uploaded_file($file['tmp_name'], $n);
 
 					$dbloc = getenv("OPENSHIFT_MYSQL_DB_HOST");
