@@ -19,7 +19,8 @@
 					$n = $newloc;
 					$counter = 0;
 					while(file_exists($n)) {
-						$n = pathinfo($newloc)["dirname"] ."/".pathinfo($newloc)["basename"] . "_". strval($counter).".".pathinfo($newloc)["extension"];
+						$p = pathinfo($newloc);
+						$n = $p["dirname"] ."/". $p["basename"] . "_". strval($counter).".". $p["extension"];
 						$counter++;
 					}
 					echo($n);
