@@ -159,6 +159,8 @@
 			    -o-transition: all 75ms ease-out;
 			    transition: all 75ms ease-out;
 
+			    text-overflow: ellipsis;
+
 			 }
 			
 			#downloads .uploadButton.greyed{
