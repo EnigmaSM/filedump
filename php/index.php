@@ -171,7 +171,7 @@ header("Pragma: no-cache");
 		</div>
 		
 		<div id="outro">
-		  		<a href="upload.php" >Upload File</a>
+		  		<a href="upload.php" >Upload New File</a>
 		  		<a href="./leaderboard.php">
 					Leaderboard
 				</a>
