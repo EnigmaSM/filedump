@@ -60,7 +60,7 @@
 			  color:#ED5413;
 			 }
 
-			 #outro a:not(a:last-child){
+			 #outro a:not{
 			 	margin-bottom:10px
 			 }
 
