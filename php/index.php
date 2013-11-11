@@ -211,12 +211,12 @@ header("Pragma: no-cache");
 
 				var width = $( this ).innerWidth();
 				var line = $( this ).children()[ 0 ];
-				n = $(line.css('font-size'));
+				n = $(line).css('font-size');
 
 				console.log(width);
 				console.log(line.offsetWidth());
 
-				while ( $(line).width() > width ) {
+				while ( $(line).offsetWidth() > width ) {
 					n = n-1;
 					$(line).css( 'font-size', n );
 				}
