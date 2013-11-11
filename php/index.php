@@ -214,11 +214,11 @@ header("Pragma: no-cache");
 				n = line.css('font-size');
 
 				console.log(width);
-				console.log(line);
+				console.log(line.width());
 
-				while ( $( line ).width() > width ) {
+				while ( line.width() > width ) {
 					n = n-1;
-					$( line ).css( 'font-size', n );
+					line.css( 'font-size', n );
 				}
 
 			});
