@@ -34,7 +34,7 @@
 					$numfiles = $numfiles["MAX(id)"];
 
 					if(!mysql_query(
-						"INSERT INTO files (id, filepath, elo) VALUES (". ($numfiles+1) .", ' mysqli::real_escape_string (". $newloc .")', 1400)"
+						"INSERT INTO files (id, filepath, elo) VALUES (". ($numfiles+1) .", mysqli::real_escape_string ('". $newloc ."'), 1400)"
 						)){
 						echo("<p>". mysql_error() ."</p>");
 					}
