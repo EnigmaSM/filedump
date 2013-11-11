@@ -171,10 +171,14 @@ header("Pragma: no-cache");
 		</div>
 		
 		<div id="outro">
-		  <a class="uploadButton" href="./leaderboard.php">
-			Leaderboard
-		  </a>
-		  <a href="upload.php" >Click here to upload</a>
+		  	<p>
+		  		<a class="uploadButton" href="./leaderboard.php">
+					Leaderboard
+				</a>
+			</p>
+		  	<p>
+		  		<a href="upload.php" >Click here to upload</a>
+			</p>
 		</div>
 
 		<script type="text/javascript" src="jquery-2.0.3.min.js"></script>

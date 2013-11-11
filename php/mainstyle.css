@@ -60,6 +60,10 @@
 			  color:#ED5413;
 			 }
 
+			 #outro p:not(p:last-child){
+			 	padding-bottom:10px
+			 }
+
 
 			 ::-moz-selection{
 			  color:#E86B35;
