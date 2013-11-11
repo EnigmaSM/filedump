@@ -159,10 +159,10 @@ header("Pragma: no-cache");
 			  <p>Trustworthyness: questionable</p>
 		  </a>
 		  <a class="uploadButton" style="height:0px; opacity:0; display:none;" href="./">
-		  	Give Me Another Pair
+			Give Me Another Pair
 		  </a>
 		  <a class="uploadButton" style="height:0px; opacity:0; display:none;" href="./leaderboard.php">
-		  	Leaderboard
+			Leaderboard
 		  </a>
 		</div>
 		
@@ -209,17 +209,16 @@ header("Pragma: no-cache");
 
 				console.log(this);
 
-			    var width = $( this ).width(),
-			        html = '<span style="white-space:nowrap"></span>',
-			        line = $( this ).wrapInner( html ).children()[ 0 ],
-			        n = 100;
+				var width = $( this ).width(),
+				line = $( this ).wrapInner( html ).children()[ 0 ],
+				n = line.css('font-size');
 
-			    $( line ).css( 'font-size', n );
+				$( line ).css( 'font-size', n );
 
-			    while ( $( line ).width() > width ) {
-			        $( line ).css( 'font-size', --n );
-			    }
-			    
+				while ( $( line ).width() > width ) {
+					$( line ).css( 'font-size', --n );
+				}
+
 			});
 		</script>
 
