@@ -205,23 +205,21 @@ header("Pragma: no-cache");
 				});
 			});
 
-			$( '.dl' ).each(function ( i, box ) {
+			$( '.dl' ).each(function () {
 
-				console.log(box);
+				console.log(this);
 
-			    var width = $( box ).width(),
+			    var width = $( this ).width(),
 			        html = '<span style="white-space:nowrap"></span>',
-			        line = $( box ).wrapInner( html ).children()[ 0 ],
+			        line = $( this ).wrapInner( html ).children()[ 0 ],
 			        n = 100;
 
-			    $( box ).css( 'font-size', n );
+			    $( line ).css( 'font-size', n );
 
 			    while ( $( line ).width() > width ) {
-			        $( box ).css( 'font-size', --n );
+			        $( line ).css( 'font-size', --n );
 			    }
-
-			    $( box ).text( $( line ).text() );
-
+			    
 			});
 		</script>
 
