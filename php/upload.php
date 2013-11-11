@@ -18,6 +18,7 @@
 					$n = $newloc;
 					$counter = 0;
 					while(file_exists($n)){
+						echo($n);
 						$n = $newloc ."_". strval($counter);
 						$counter++;
 					}
