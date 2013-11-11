@@ -14,13 +14,13 @@
 					echo('<p>ACTUALLY SUBMIT A FILE THIS TIME?</p>');
 				} else{
 					$file = $_FILES['upfile'];
-					$filedir = "./files/";
 					$newloc = $filedir . $file['name'];
 					move_uploaded_file($file['tmp_name'], $newloc);
 
 					$dbloc = getenv("OPENSHIFT_MYSQL_DB_HOST");
 					$dbusr = getenv("OPENSHIFT_MYSQL_DB_USERNAME");
 					$dbpass = getenv("OPENSHIFT_MYSQL_DB_PASSWORD");
+					$filedir = getenv("OPENSHIFT_DATA_DIR");
 					/*
 					$dbloc = "localhost";
 					$dbusr = "root";
