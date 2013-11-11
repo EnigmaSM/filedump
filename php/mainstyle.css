@@ -23,7 +23,7 @@
 			  padding:40px;
 			}
 			
-			#intro, #outro{
+			#intro, #outro, #footer{
 			  width:400px;
 			  margin-left:auto;
 			  margin-right:auto;
@@ -47,7 +47,7 @@
 			  margin:10px;	
 			}
 			
-			#outro a{
+			#outro a, #footer a{
 			 	margin:0px;
 			 display:block;
 			  text-decoration:none;
@@ -58,7 +58,7 @@
 			  transition: color 75ms ease-out;
 			}
 			
-			#outro a:hover{
+			#outro a:hover, #footer a:hover{
 			  color:#ED5413;
 			 }
 
@@ -259,5 +259,25 @@
 			  right:12px;
 			  left:12px;
 			  font-size:0.65em;
+			 }
+
+			 #footerpositioner{
+			 	position:absolute;
+			 	left:0px;
+			 	top:0px;
+
+			 	min-height:100%;
+			 	height:800px;
+			 	position:relative;
+			 }
+
+			 #footer{
+			 	text-align:center;
+			 	position:absolute;
+			 	
+			 	bottom:10px;
+			 	left:50%;
+			 	width:400px;
+			 	margin-left:-200px;
 			 }
 

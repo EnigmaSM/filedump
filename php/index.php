@@ -171,10 +171,17 @@ header("Pragma: no-cache");
 		</div>
 		
 		<div id="outro">
-		  		<a href="upload.php" >Upload New File</a>
+		  		<a href="upload.php" >Upload File</a>
 		  		<a href="./leaderboard.php">
 					Leaderboard
 				</a>
+		</div>
+
+		<div id="footerpositioner">
+			<div id="footer">
+				Site by Maxwell Huang-Hobbs of 
+				<a href="http://www.enigmasm.com">Those Assholes at EnigmaSM</a>
+			</div>
 		</div>
 
 		<script type="text/javascript" src="jquery-2.0.3.min.js"></script>
