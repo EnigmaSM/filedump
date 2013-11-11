@@ -226,15 +226,16 @@
 
 
 			 .dl{
+			 	/*
 			 	word-wrap: break-word;
 			 	overflow-wrap: break-word;
-
-			  color:#111111;
-			  -webkit-transition: background-color 75ms ease-out;
-			  -moz-transition: background-color 75ms ease-out;
-			  -o-transition: background-color 75ms ease-out;
-			  transition: background-color 75ms ease-out;
-			 }
+				*/
+				color:#111111;
+				-webkit-transition: background-color 75ms ease-out;
+				-moz-transition: background-color 75ms ease-out;
+				-o-transition: background-color 75ms ease-out;
+				transition: background-color 75ms ease-out;
+			}
 			 
 			 .dl:hover{
 			  background-color:#ffffff
