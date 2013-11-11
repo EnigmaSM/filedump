@@ -80,7 +80,7 @@ header("Pragma: no-cache");
 			return array($ticket1, $ticket2);
 		}
 
-		ini_set('display_errors', 'On');
+		//ini_set('display_errors', 'On');
 		
 
 		

@@ -67,7 +67,7 @@ header("Pragma: no-cache");
 			return $ticket;
 		}
 
-		ini_set('display_errors', 'On');
+		//ini_set('display_errors', 'On');
 	?>
 
 <html>
