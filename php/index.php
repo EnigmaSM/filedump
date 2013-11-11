@@ -216,7 +216,7 @@ header("Pragma: no-cache");
 				console.log(width);
 				console.log(line.offsetWidth);
 
-				while ( $(line).offsetWidth() > width ) {
+				while ( line.offsetWidth() > width ) {
 					n = n-1;
 					$(line).css( 'font-size', n );
 				}
