@@ -9,6 +9,9 @@ header("Pragma: no-cache");
 	<?php
 
 		function formatBytes($bytes, $precision = 2) { 
+			if($bytes==0){
+				return "??? B";
+			}
 			$units = array('B', 'KB', 'MB', 'GB', 'TB'); 
 
 			$bytes = max($bytes, 0); 
