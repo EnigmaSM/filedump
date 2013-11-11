@@ -209,8 +209,8 @@ header("Pragma: no-cache");
 
 				console.log(this);
 
-				var width = $( this ).innerWidth(),
-				line = $( this ).children()[ 0 ],
+				var width = $( this ).innerWidth();
+				var line = $($( this ).children()[ 0 ])l
 				n = line.css('font-size');
 
 				while ( $( line ).width() > width ) {
