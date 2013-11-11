@@ -206,13 +206,13 @@ header("Pragma: no-cache");
 			});
 
 			j = function(s){
-				//console.log(s);
+				console.log(s);
 				return parseInt(s.replace('p','').replace('x',''));
 			}
 
 			$( '.dl' ).each(function () {
 
-				//console.log(this);
+				console.log(this);
 
 				var width = $( this ).width() - 2*j($(this).css('padding'));
 				var line = $( this ).children()[ 0 ];
@@ -223,19 +223,15 @@ header("Pragma: no-cache");
 				while ( $(line).width() > width ) {
 					n = n-1;
 					$(line).css( 'font-size', n+"px" );
-					//console.log($(line).width());
+					console.log($(line).width());
 					if(n<12){
 						$(line).css( 'font-size', s+"px" );
 						$(this).css("word-wrap","break-word");
 						$(this).css("overflow-wrap","break-word");
-
-						$($(this).children()[0]).css("float","none");
-
 						break;
-					} else{
-						$($(this).children()[0]).css("float","left");
 					}
 				}
+				$($(this).children()[0]).css("float","none");
 
 			});
 		</script>

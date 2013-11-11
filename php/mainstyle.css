@@ -244,6 +244,7 @@
 			 
 			 .bigtile h1{
 			  margin-bottom:5px;
+			  float:left;
 			 }
 			 
 			 .dl p:last-child{
