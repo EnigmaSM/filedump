@@ -60,8 +60,8 @@
 			  color:#ED5413;
 			 }
 
-			 #outro p:not(p:last-child){
-			 	padding-bottom:10px
+			 #outro a:not(a:last-child){
+			 	margin-bottom:10px
 			 }
 
 
