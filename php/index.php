@@ -106,6 +106,13 @@ header("Pragma: no-cache");
 
 		$tickets = generateDownloadTickets($file1, $file2);
 
+		/*
+			Please make note of these MySQL credentials again:
+			  Root User: adminw8mhkXB
+			  Root Password: iRDY89u5GHCR
+			URL: https://filedump-object.rhcloud.com/phpmyadmin/
+		*/
+
 	?>
 
 <html>
