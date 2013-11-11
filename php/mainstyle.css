@@ -48,6 +48,8 @@
 			}
 			
 			#outro a{
+			 	margin:0px;
+			 display:block;
 			  text-decoration:none;
 			  color:#eeeeee;
 			  -webkit-transition: color 75ms ease-out;
@@ -60,8 +62,8 @@
 			  color:#ED5413;
 			 }
 
-			 #outro a:not{
-			 	margin-bottom:10px
+			 #outro a:not(*:last-child){
+			 	margin-bottom:10px;
 			 }
 
 

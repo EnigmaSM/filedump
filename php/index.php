@@ -174,7 +174,6 @@ header("Pragma: no-cache");
 		  		<a href="./leaderboard.php">
 					Leaderboard
 				</a>
-				<br>
 		  		<a href="upload.php" >Click here to upload</a>
 		</div>
 
