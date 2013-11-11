@@ -205,7 +205,9 @@ header("Pragma: no-cache");
 				});
 			});
 
-			$( '.dl h2' ).each(function ( i, box ) {
+			$( '.dl' ).each(function ( i, box ) {
+
+				console.log(box);
 
 			    var width = $( box ).width(),
 			        html = '<span style="white-space:nowrap"></span>',
