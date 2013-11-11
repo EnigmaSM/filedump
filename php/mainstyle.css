@@ -161,6 +161,7 @@
 
 			    overflow: hidden;
 			    vertical-align: top;
+			    white-space:nowrap;
 			 }
 			
 			#downloads .uploadButton.greyed{
