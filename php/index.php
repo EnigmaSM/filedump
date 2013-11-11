@@ -168,12 +168,12 @@ header("Pragma: no-cache");
 		  <a class="uploadButton" style="height:0px; opacity:0; display:none;" href="./">
 			Give Me Another Pair
 		  </a>
-		  <a class="uploadButton" style="height:0px; opacity:0; display:none;" href="./leaderboard.php">
-			Leaderboard
-		  </a>
 		</div>
 		
 		<div id="outro">
+		  <a class="uploadButton" href="./leaderboard.php">
+			Leaderboard
+		  </a>
 		  <a href="upload.php" >Click here to upload</a>
 		</div>
 
