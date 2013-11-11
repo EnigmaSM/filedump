@@ -9,6 +9,8 @@
 	$dbpass = "root";
 	*/
 
+	ini_set('display_errors', 'On');
+
 	if(isset($_GET['ticket'])){
 		$link = mysql_connect($dbloc, $dbusr, $dbpass);
 		mysql_select_db("filedump");
