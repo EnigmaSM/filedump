@@ -268,7 +268,7 @@
 
 			 	min-height:100%;
 			 	width:100%;
-			 	height:800px;
+			 	height:830px;
 			 	position:relative;
 			 }
 
@@ -276,7 +276,7 @@
 			 	text-align:center;
 			 	position:absolute;
 
-			 	bottom:10px;
+			 	bottom:30px;
 			 	left:50%;
 			 	width:400px;
 			 	margin-left:-200px;
