@@ -34,7 +34,8 @@
 					$numfiles = $numfiles["MAX(id)"];
 
 					if(!mysql_query(
-						"INSERT INTO files (id, filepath, elo) VALUES (". ($numfiles+1) .", '". mysqli::real_escape_string ($newloc) ."), 1400)"
+						//should not use mysql_real_escape_string, because it is depreciated. can't mysqli with openshift, I think...
+						"INSERT INTO files (id, filepath, elo) VALUES (". ($numfiles+1) .", '". mysql_real_escape_string ($newloc) ."), 1400)"
 						)){
 						echo("<p>". mysql_error() ."</p>");
 					}
