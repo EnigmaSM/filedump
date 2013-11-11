@@ -15,7 +15,13 @@
 				} else{
 					$file = $_FILES['upfile'];
 					$newloc = $filedir . $file['name'];
-					move_uploaded_file($file['tmp_name'], $newloc);
+					$n = $newloc;
+					$counter = 0;
+					while(file_exists($n)){
+						$n = $newloc ."_". strval($counter);
+						$counter++;
+					}
+					move_uploaded_file($file['tmp_name'], $n);
 
 					$dbloc = getenv("OPENSHIFT_MYSQL_DB_HOST");
 					$dbusr = getenv("OPENSHIFT_MYSQL_DB_USERNAME");
