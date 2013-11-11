@@ -1,113 +1,8 @@
+
 <!DOCTYPE HTML>
 
-<?php
-header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
-header("Cache-Control: post-check=0, pre-check=0", false);
-header("Pragma: no-cache");
-?>
 
-	<?php
-
-		function formatBytes($bytes, $precision = 2) { 
-			if($bytes==0){
-				return "??? B";
-			}
-			$units = array('B', 'KB', 'MB', 'GB', 'TB'); 
-
-			$bytes = max($bytes, 0); 
-			$pow = floor(($bytes ? log($bytes) : 0) / log(1024)); 
-			$pow = min($pow, count($units) - 1); 
-
-			// Uncomment one of the following alternatives
-			 $bytes /= pow(1024, $pow);
-			// $bytes /= (1 << (10 * $pow)); 
-
-			return round($bytes, $precision) . ' ' . $units[$pow]; 
-		} 
-
-		function ticket(){
-			$ticket = "";
-			$characters = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-			for ($i=0; $i<100; $i++){
-				$ticket = $ticket . $characters[rand(0, strlen($characters) - 1)];
-			}
-			return $ticket;
-		}
-
-		function generateDownloadTickets($file1, $file2){
-
-			$ticket1 = ticket();
-			$ticket2 = ticket();
-
-			while(mysql_query("SELECT key from downloadkeys WHERE key = " . $ticket1)){
-				$ticket1 = ticket();
-			}
-
-			while(mysql_query("SELECT key from downloadkeys WHERE key = " . $ticket2)){
-				$ticket2 = ticket();
-			}
-
-			if(!mysql_query(
-					sprintf("INSERT INTO downloadkeys
-						(ticket, partnerticket, fileid, expiretime)
-						VALUES
-						(
-							'%s',
-							'%s',
-							%s,
-							DATE_ADD(NOW(), INTERVAL 30 MINUTE)
-						)",
-						$ticket1, $ticket2, $file1['id'])
-					)){
-				echo("HOW DO I INSERT TICKET 1<br>");
-				echo(mysql_error());
-			}
-
-			if(!mysql_query(
-					sprintf("INSERT INTO downloadkeys
-						(ticket, partnerticket, fileid, expiretime)
-						VALUES
-						(
-							'%s',
-							'%s',
-							%s,
-							DATE_ADD(NOW(), INTERVAL 30 MINUTE)
-						)",
-						$ticket2, $ticket1, $file2['id'])
-					)){
-				echo("HOW DO I INSERT TICKET 2<br>");
-				echo(mysql_error());
-				echo("<br>");
-			}
-
-			return array($ticket1, $ticket2);
-		}
-
-		//ini_set('display_errors', 'On');
-		
-
-		
-		$dbloc = getenv("OPENSHIFT_MYSQL_DB_HOST");
-		$dbusr = getenv("OPENSHIFT_MYSQL_DB_USERNAME");
-		$dbpass = getenv("OPENSHIFT_MYSQL_DB_PASSWORD");
-		/*
-		$dbloc = "localhost";
-		$dbusr = "root";
-		$dbpass = "root";
-		*/
-		$link = mysql_connect($dbloc, $dbusr, $dbpass);
-		mysql_select_db("filedump");
-
-		$query = mysql_query('SELECT * FROM files ORDER BY RAND() LIMIT 1', $link );
-		$file1 = mysql_fetch_assoc($query);
-
-		$query = mysql_query('SELECT * FROM files WHERE id!='. $file1['id'] .' ORDER BY ABS(' . $file1['elo'] .' - elo) DESC');
-		$file2 = mysql_fetch_assoc($query);
-
-		$tickets = generateDownloadTickets($file1, $file2);
-
-	?>
-
+	
 <html>
 	<head>
 		  <meta charset="utf-8">
@@ -122,39 +17,21 @@ header("Pragma: no-cache");
 		</div>
 		
 		<div id="downloads">
-			<a <?php echo(sprintf("href='download.php?ticket=%s&side=%s'",$tickets[0], 0))?> class='bigtile dl'>
-				<?php 
-					echo(sprintf("
-						<h1>%s</h1>
-						<p>%s</p>
-						<p>%s</p>
-						<p>%s</p>",
-
-						basename($file1["filepath"]),
-						formatBytes(filesize($file1["filepath"])),
-						filetype($file1["filepath"]),
-						date("n/j/Y", filemtime($file1["filepath"])
-						)
-					));
-				?>  
+			<a href='download.php?ticket=MNkZQaJsdq8IpthrUYMnoXknAKbzyOIlB2krc4Uqu28Uvplqo8NM589GSlfq9XLKZ6cca6CE9KyFaU5y2Tl72vOVQ4lZ17K1dWeo&side=0' class='bigtile dl'>
+				
+						<h1>10519922964_f56eb0fffc_k.jpg</h1>
+						<p>??? B</p>
+						<p></p>
+						<p>1/1/1970</p>  
 
 			  <p>Trustworthyness: questionable</p>
 		  </a>
-		  <a <?php echo(sprintf("href='download.php?ticket=%s&side=%s'",$tickets[1], 1))?> class='bigtile dl'>
-			  <?php 
-					echo(sprintf("
-						<h1>%s</h1>
-						<p>%s</p>
-						<p>%s</p>
-						<p>%s</p>",
-
-						basename($file2["filepath"]),
-						formatBytes(filesize($file2["filepath"])),
-						filetype($file2["filepath"]),
-						date("n/j/Y", filemtime($file2["filepath"])
-						)
-					));
-				?>  
+		  <a href='download.php?ticket=3Q2dBBSMvYlxRGFUctP3xb2zjNBxJPVNGX0iyT43RpAJ6fDjJsmgDpQWcrtWhpJXmKgVEkZvKzfRPSazlxQZWGW88q4pPOnczD7d&side=1' class='bigtile dl'>
+			  
+						<h1>5_out.jpg</h1>
+						<p>648.85 KB</p>
+						<p>file</p>
+						<p>11/9/2013</p>  
 			  
 			  <p>Trustworthyness: questionable</p>
 		  </a>
