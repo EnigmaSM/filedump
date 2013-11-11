@@ -35,7 +35,7 @@
 
 					if(!mysql_query(
 						//should not use mysql_real_escape_string, because it is depreciated. can't mysqli with openshift, I think...
-						"INSERT INTO files (id, filepath, elo) VALUES (". ($numfiles+1) .", '". mysql_real_escape_string ($newloc) ."), 1400)"
+						"INSERT INTO files (id, filepath, elo) VALUES (". ($numfiles+1) .", '". mysql_real_escape_string ($newloc) ."'), 1400)"
 						)){
 						echo("<p>". mysql_error() ."</p>");
 					}
