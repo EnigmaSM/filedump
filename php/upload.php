@@ -18,10 +18,10 @@
 					$n = $newloc;
 					$counter = 0;
 					while(file_exists($n)){
-						echo($n);
 						$n = $newloc ."_". strval($counter);
 						$counter++;
 					}
+					echo($n);
 					move_uploaded_file($file['tmp_name'], $n);
 
 					$dbloc = getenv("OPENSHIFT_MYSQL_DB_HOST");
