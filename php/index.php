@@ -214,7 +214,7 @@ header("Pragma: no-cache");
 
 				console.log(this);
 
-				var width = $( this ).width() - 2*j($(this).css('padding'));
+				var width = 171;
 				var line = $( this ).children()[ 0 ];
 
 				var s = j($(line).css('font-size'));
