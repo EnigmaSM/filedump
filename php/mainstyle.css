@@ -224,6 +224,9 @@
 
 
 			 .dl{
+			 	word-wrap: break-word;
+			 	overflow-wrap: break-word;
+
 			  color:#111111;
 			  -webkit-transition: background-color 75ms ease-out;
 			  -moz-transition: background-color 75ms ease-out;
