@@ -172,7 +172,7 @@ header("Pragma: no-cache");
 		
 		<div id="outro">
 		  	<p>
-		  		<a class="uploadButton" href="./leaderboard.php">
+		  		<a href="./leaderboard.php">
 					Leaderboard
 				</a>
 			</p>
